@@ -3,16 +3,16 @@
 
 <head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5MY7JLJSSS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5MY7JLJSSS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-5MY7JLJSSS');
-</script>
-    
+        gtag('config', 'G-5MY7JLJSSS');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sharma Florist - Home | Flower Delivery & Decoration Services</title>
@@ -22,12 +22,14 @@
     <meta property="og:site_name" content="Sharma Florist">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Sharma Florist - Home | Flower Delivery & Decoration Services">
-    <meta property="og:description" content="Sharma Florist - Your trusted partner for flower delivery and decoration services in Ghaziabad, Noida & Greater Noida. Same-day delivery from Canada/US to India.">
+    <meta property="og:description"
+        content="Sharma Florist - Your trusted partner for flower delivery and decoration services in Ghaziabad, Noida & Greater Noida. Same-day delivery from Canada/US to India.">
     <meta property="og:url" content="https://sharmaflorist.com/">
     <meta property="og:image" content="https://sharmaflorist.com/rose.webp">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Sharma Florist - Home | Flower Delivery & Decoration Services">
-    <meta name="twitter:description" content="Sharma Florist - Your trusted partner for flower delivery and decoration services in Ghaziabad, Noida & Greater Noida. Same-day delivery from Canada/US to India.">
+    <meta name="twitter:description"
+        content="Sharma Florist - Your trusted partner for flower delivery and decoration services in Ghaziabad, Noida & Greater Noida. Same-day delivery from Canada/US to India.">
     <meta name="twitter:image" content="https://sharmaflorist.com/rose.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,313 +37,8 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap"
         rel="stylesheet">
     <link rel="icon" href="favicon.ico">
-    <style>
-        :root {
-            --pink: #f8e1e7;
-            --green: #d6f5e3;
-            --white: #fff;
-            --text: #3a3a3a;
-            --soft-green: #eafaf1;
-            --soft-pink: #fbeff3;
-            --hover: #f3d6e3;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
-            background: var(--soft-pink);
-            color: var(--text);
-            min-height: 100vh;
-            text-align: center;
-        }
-
-        /* Sticky Navbar */
-        nav {
-            position: sticky;
-            top: 0;
-            background: var(--white);
-            box-shadow: 0 2px 8px rgba(220, 180, 220, 0.08);
-            z-index: 100;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0.5rem 0;
-            transition: background 0.3s;
-        }
-
-        nav ul {
-            display: flex;
-            gap: 1rem;
-            list-style: none;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: var(--text);
-            font-weight: 600;
-            font-size: 1.1rem;
-            padding: 0.5rem 0.8rem;
-            border-radius: 20px;
-            transition: background 0.3s, color 0.3s, transform 0.2s;
-        }
-
-        nav ul li a:hover,
-        nav ul li a.active {
-            background: var(--hover);
-            color: #b85c8c;
-            transform: scale(1.08);
-        }
-
-        /* Section Styles */
-        section {
-            padding: 1.5rem 0.5rem;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .home {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding-top: 0.5rem;
-            padding-bottom: 0.5rem;
-            margin-top: 0;
-            margin-bottom: 0;
-            min-height: unset;
-        }
-
-        .home h1 {
-            font-size: 2.7rem;
-            color: #b85c8c;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .home p {
-            font-size: 1.3rem;
-            color: #5e5e5e;
-            margin-bottom: 2rem;
-        }
-
-        /* Service Cards */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .service-card {
-            background: var(--white);
-            border-radius: 18px;
-            box-shadow: 0 2px 12px rgba(220, 180, 220, 0.08);
-            padding: 2.5rem 2rem;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 8px 24px rgba(220, 180, 220, 0.18);
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            color: #b85c8c;
-            margin-bottom: 1rem;
-        }
-
-        .service-card p {
-            font-size: 1rem;
-            color: #4a4a4a;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-card .cta-btn {
-            background: linear-gradient(90deg, var(--pink), var(--green));
-            color: #b85c8c;
-            border: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 25px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            display: inline-block;
-            text-decoration: none;
-        }
-
-        .service-card .cta-btn:hover {
-            background: var(--hover);
-            color: #fff;
-            transform: scale(1.05);
-        }
-
-        /* About Section (unused styles removed) */
-
-        /* Footer */
-        footer {
-            background: var(--white);
-            color: #7bb274;
-            text-align: center;
-            padding: 1.5rem 1rem 1rem 1rem;
-            font-size: 1rem;
-            border-top: 1px solid #e3c6f7;
-        }
-
-        /* Back to Top Button */
-        .back-to-top {
-            position: fixed;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: var(--white);
-            color: #b85c8c;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-weight: 600;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s;
-            z-index: 1000;
-            opacity: 0;
-            visibility: hidden;
-        }
-
-        .back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .back-to-top:hover {
-            background: var(--hover);
-            transform: translateY(-50%) scale(1.1);
-        }
-
-        /* WhatsApp Button */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: auto;
-            height: 60px;
-            background: #25d366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 16px;
-            text-decoration: none;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
-            z-index: 1000;
-            transition: all 0.3s ease;
-            animation: whatsapp-bounce 2s infinite;
-            overflow: hidden;
-            white-space: nowrap;
-            padding: 0 15px;
-            gap: 8px;
-        }
-
-        .whatsapp-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-            color: white;
-        }
-
-        .whatsapp-btn .whatsapp-icon {
-            width: 24px;
-            height: 24px;
-            fill: white;
-        }
-
-        .whatsapp-btn .whatsapp-text {
-            font-size: 14px;
-            font-weight: 600;
-            animation: text-fade-in 0.3s ease;
-        }
-
-        @keyframes whatsapp-bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
-        }
-
-        @keyframes text-fade-in {
-            0% {
-                opacity: 0;
-                transform: translateX(-10px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        /* Responsive */
-        @media (max-width: 900px) {
-            .services-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            section {
-                padding: 3rem 0.5rem 2rem 0.5rem;
-            }
-        }
-
-        @media (max-width: 600px) {
-            nav ul {
-                gap: 0.3rem;
-            }
-            
-            nav ul li a {
-                font-size: 0.9rem;
-                padding: 0.4rem 0.6rem;
-            }
-
-            .home h1 {
-                font-size: 2rem;
-            }
-
-            .service-card {
-                padding: 2rem 1.5rem;
-            }
-
-            .service-card h3 {
-                font-size: 1.3rem;
-            }
-
-            .back-to-top {
-                right: 15px;
-                width: 45px;
-                height: 45px;
-            }
-            section {
-                padding: 1rem 0.2rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
 </head>
 
 <body>
@@ -364,33 +61,38 @@
     <section id="services">
         <h2 style="color: #b85c8c; margin-bottom: 2rem; font-size: 2rem;">Our Services</h2>
         <div class="services-grid">
-            
+
             <!-- Rose N Petals -->
             <div class="service-card">
                 <h3>🌹 Rose N Petals</h3>
-                <p>Specialized flower bouquet delivery service. Fresh flowers, custom arrangements, and same-day delivery for all occasions including birthdays, anniversaries, and special celebrations.</p>
+                <p>Specialized flower bouquet delivery service. Fresh flowers, custom arrangements, and same-day
+                    delivery for all occasions including birthdays, anniversaries, and special celebrations.</p>
                 <a href="rose-n-petals.html" class="cta-btn">Explore Bouquet Delivery</a>
             </div>
 
             <!-- Sharma Flower Decorators -->
             <div class="service-card">
                 <h3>🌸 Sharma Flower Decorators</h3>
-                <p>Professional flower decoration services for weddings, corporate events, and special occasions. Transform any space with our artistic floral arrangements and decorative expertise.</p>
+                <p>Professional flower decoration services for weddings, corporate events, and special occasions.
+                    Transform any space with our artistic floral arrangements and decorative expertise.</p>
                 <a href="sharma-flower-decorators.html" class="cta-btn">View Decoration Services</a>
             </div>
 
             <!-- International Delivery -->
             <div class="service-card">
                 <h3>🌍 International Delivery</h3>
-                <p>Same-day flower delivery from Canada/US to Ghaziabad, Noida & Greater Noida. Send love across borders with our reliable international flower delivery service.</p>
-                <a href="flower-delivery-canada-to-ghaziabad.html" class="cta-btn">Learn About International Delivery</a>
+                <p>Same-day flower delivery from Canada/US to Ghaziabad, Noida & Greater Noida. Send love across borders
+                    with our reliable international flower delivery service.</p>
+                <a href="flower-delivery-canada-to-ghaziabad.html" class="cta-btn">Learn About International
+                    Delivery</a>
             </div>
 
             <!-- Blog -->
             <div class="service-card">
                 <h3>📝 Blog</h3>
-                <p>Stay updated with the latest flower trends, care tips, and floral inspiration. Read our expert articles on flower arrangements, seasonal blooms, and celebration ideas.</p>
-                <a href="/blog/" class="cta-btn">Read Our Blog</a>
+                <p>Stay updated with the latest flower trends, care tips, and floral inspiration. Read our expert
+                    articles on flower arrangements, seasonal blooms, and celebration ideas.</p>
+                <a href="blog/index.html" class="cta-btn">Read Our Blog</a>
             </div>
 
         </div>
@@ -401,60 +103,20 @@
 
     <!-- Footer -->
     <footer>
-        <div>Sharma Florist &copy; 2025 | Flower Delivery & Decoration Services in Ghaziabad, Noida & Greater Noida</div>
+        <div>Sharma Florist &copy; 2025 | Flower Delivery & Decoration Services in Ghaziabad, Noida & Greater Noida
+        </div>
     </footer>
 
     <!-- WhatsApp Button -->
     <a href="https://wa.me/919599308501" target="_blank" class="whatsapp-btn" aria-label="Contact us on WhatsApp">
         <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
         </svg>
         <span class="whatsapp-text">Order Now on WhatsApp</span>
     </a>
 
-    <script>
-        // Smooth scroll and active nav
-        const navLinks = document.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                const href = this.getAttribute('href');
-                if (href === '#home') {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                } else {
-                    document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
-                }
-                navLinks.forEach(l => l.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-
-        // Highlight nav on scroll
-        window.addEventListener('scroll', () => {
-            const scrollPos = window.scrollY + 80;
-            navLinks.forEach(link => {
-                const section = document.querySelector(link.getAttribute('href'));
-                if (section && section.offsetTop <= scrollPos && section.offsetTop + section.offsetHeight > scrollPos) {
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    link.classList.add('active');
-                }
-            });
-
-            // Show/hide back to top button
-            const backToTop = document.getElementById('backToTop');
-            if (window.scrollY > 300) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
-            }
-        });
-
-        // Back to top functionality
-        document.getElementById('backToTop').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
+    <script src="style.js" defer></script>
 </body>
 
-</html> 
+</html>
