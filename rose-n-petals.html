@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -250,8 +250,11 @@
                 <p>Fastest flower delivery service in Ghaziabad, Noida & Greater Noida. Get fresh bouquets delivered to
                     your doorstep within 2 hours. Perfect for last-minute gifting!</p>
             </div>
+        </div>
 
-
+        <div class="see-more-container">
+            <button class="see-more-btn">See More Services</button>
+        </div>
     </section>
 
     <!-- About Us Section -->
@@ -291,74 +294,60 @@
 
     <script src="style.js" defer></script>
     <script>
-        // Gentle falling flower animation on mousemove (desktop) and scroll (mobile)
+
+        // Gentle falling flower animation (MOBILE ONLY)
         const petalSVGs = [
             '<svg width="28" height="28" viewBox="0 0 28 28"><ellipse cx="14" cy="14" rx="8" ry="14" fill="#f8e1e7"/><ellipse cx="14" cy="8" rx="4" ry="7" fill="#e3c6f7"/></svg>',
             '<svg width="24" height="24" viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="6" ry="10" fill="#eafaf1"/><ellipse cx="12" cy="7" rx="3" ry="5" fill="#b85c8c" opacity="0.13"/></svg>',
             '<svg width="20" height="20" viewBox="0 0 20 20"><ellipse cx="10" cy="10" rx="5" ry="8" fill="#fbeff3"/><ellipse cx="10" cy="5" rx="2.5" ry="4" fill="#7bb274" opacity="0.13"/></svg>'
         ];
+
         let lastPetalTime = 0;
         let lastScrollTime = 0;
-        let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-        // Create petal function
-        function createPetal(x, y, isScroll = false) {
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+        // Create petal
+        function createPetal() {
             const now = Date.now();
-            const timeLimit = isScroll ? 100 : 30; // Slower for scroll
-            if (now - lastPetalTime < timeLimit) return;
+            if (now - lastPetalTime < 100) return;
             lastPetalTime = now;
 
             const petal = document.createElement('div');
             petal.className = 'petal';
             petal.innerHTML = petalSVGs[Math.floor(Math.random() * petalSVGs.length)];
 
-            if (isScroll) {
-                // For scroll: random position across top of screen
-                petal.style.left = (Math.random() * window.innerWidth) + 'px';
-                petal.style.top = '-30px';
-                petal.style.animationDuration = (3 + Math.random() * 2) + 's'; // Slower fall for full page
-            } else {
-                // For mouse: near cursor
-                petal.style.left = (x + (Math.random() * 40 - 20)) + 'px';
-                petal.style.top = (y - 20 + (Math.random() * 20 - 10)) + 'px';
-                petal.style.animationDuration = (0.8 + Math.random() * 0.4) + 's';
-            }
+            // Always from top for mobile
+            petal.style.left = (Math.random() * window.innerWidth) + 'px';
+            petal.style.top = '-30px';
+            petal.style.animationDuration = (3 + Math.random() * 2) + 's';
 
-            petal.style.transform = `rotate(${Math.random() * 60 - 30}deg)`;
             document.body.appendChild(petal);
-            setTimeout(() => petal.remove(), isScroll ? 5000 : 1200); // Longer life for scroll petals
+
+            // Remove after fall
+            setTimeout(() => petal.remove(), 5000);
         }
 
-        // Desktop: mousemove
-        document.addEventListener('mousemove', (e) => {
-            if (!isMobile) {
-                createPetal(e.clientX, e.clientY);
-            }
-        });
+        // MOBILE: scroll-trigger petals
+        if (isMobile) {
+            let scrollTimeout;
 
-        // Mobile: scroll-triggered petals
-        let scrollTimeout;
-        window.addEventListener('scroll', () => {
-            if (isMobile) {
+            window.addEventListener('scroll', () => {
                 const now = Date.now();
-                if (now - lastScrollTime < 200) return; // Limit scroll frequency
+                if (now - lastScrollTime < 200) return;
                 lastScrollTime = now;
 
-                // Clear previous timeout
                 clearTimeout(scrollTimeout);
 
-                // Create petals after scroll stops
                 scrollTimeout = setTimeout(() => {
-                    // Create 2-4 petals from top of screen
                     const petalCount = Math.floor(Math.random() * 3) + 2;
                     for (let i = 0; i < petalCount; i++) {
-                        setTimeout(() => {
-                            createPetal(0, 0, true);
-                        }, i * 100);
+                        setTimeout(createPetal, i * 100);
                     }
                 }, 100);
-            }
-        });
+            });
+        }
+
 
         // Rose N Petals image zoom animation every 5 seconds
         function showRoseImage() {

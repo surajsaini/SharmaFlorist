@@ -183,7 +183,8 @@ section {
 /* Override width for grid layout if needed, but usually grid handles it */
 .services-grid .service-card {
     width: auto;
-    background: var(--white); /* index.html specific override */
+    background: var(--white);
+    /* index.html specific override */
     box-shadow: 0 2px 12px rgba(220, 180, 220, 0.08);
 }
 
@@ -680,4 +681,35 @@ footer {
 
 .coverage-info strong {
     color: #b85c8c;
+}
+
+/* See More Services Button */
+.see-more-container {
+    text-align: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.see-more-btn {
+    background: linear-gradient(90deg, var(--pink), var(--green));
+    color: #b85c8c;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(220, 180, 220, 0.13);
+    transition: all 0.3s ease;
+}
+
+.see-more-btn:hover {
+    background: var(--hover);
+    color: #fff;
+    transform: scale(1.06);
+    box-shadow: 0 4px 12px rgba(220, 180, 220, 0.2);
+}
+
+.hidden {
+    display: none !important;
 }

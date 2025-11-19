@@ -84,3 +84,37 @@ if (backToTopBtn) {
         setTimeout(() => { if (!loaded) { loaded = true; loadScript(); } }, 3000);
     }
 })();
+
+// See More Services Functionality
+document.addEventListener('DOMContentLoaded', function () {
+    const serviceCards = document.querySelectorAll('.service-card');
+    const seeMoreBtn = document.querySelector('.see-more-btn');
+    const seeMoreContainer = document.querySelector('.see-more-container');
+
+    // Initial state: hide cards after the 6th one
+    if (serviceCards.length > 6) {
+        serviceCards.forEach((card, index) => {
+            if (index >= 6) {
+                card.classList.add('hidden');
+            }
+        });
+    } else {
+        // If 6 or fewer cards, hide the button container if it exists
+        if (seeMoreContainer) {
+            seeMoreContainer.style.display = 'none';
+        }
+    }
+
+    // Click event for "See More" button
+    if (seeMoreBtn) {
+        seeMoreBtn.addEventListener('click', function () {
+            serviceCards.forEach(card => {
+                card.classList.remove('hidden');
+            });
+            // Hide the button after showing all services
+            if (seeMoreContainer) {
+                seeMoreContainer.style.display = 'none';
+            }
+        });
+    }
+});
