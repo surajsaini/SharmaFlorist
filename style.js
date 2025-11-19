@@ -117,4 +117,83 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-});
+
+
+    // Flower Bouquet Slideshow Logic
+    const slideshowContainer = document.getElementById('bouquet-slideshow-container');
+
+    if (slideshowContainer) {
+
+        let slideIndex = 0;
+        let autoSlideInterval;
+
+        // Embedded images array (to avoid CORS issues with file:// protocol)
+        const bouquetImages = [
+            "Karwa-Chauth-gift-flower-bouquet-delivery-ghaziabad.jpg",
+            "artificial-purple-flower-with-pot-shop-ghaziabad.jpg",
+            "karwachauth-gift-gajra-flower-delivery-service-ghaziabad.jpg",
+            "mix-rose-flower-bouquet-instant-delivery-gaur-city.jpg",
+            "white-lily-flower-bouquet-same-day-delivery.jpg",
+            "white-lily-pink-rose-small-bunch-service.jpg",
+            "yellow-lilly-bookey-delivery-in-kavi-nagar-ghaziabad.jpg"
+        ];
+
+        initSlideshow(bouquetImages);
+
+        // Initialize Slideshow
+        function initSlideshow(bouquetImages) {
+            let slidesHtml = '';
+
+            bouquetImages.forEach((img, index) => {
+                slidesHtml += `
+                <div class="mySlides fade">
+                    <img src="flower-bouquet/${img}" alt="Flower Bouquet ${index + 1}">
+                </div>
+            `;
+            });
+
+            slideshowContainer.innerHTML = `
+            ${slidesHtml}
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        `;
+
+            showSlides(slideIndex);
+            startAutoSlide();
+        }
+
+        // Global controls
+        window.plusSlides = function (n) {
+            showSlides(slideIndex += n);
+            resetAutoSlide();
+        };
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("mySlides");
+
+            if (n >= slides.length) { slideIndex = 0 }
+            if (n < 0) { slideIndex = slides.length - 1 }
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            if (slides[slideIndex]) {
+                slides[slideIndex].style.display = "flex";
+            }
+        }
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+                plusSlides(1);
+            }, 4000); // 4 seconds
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+        }
+    }
+}
+
+);

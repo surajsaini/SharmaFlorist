@@ -72,15 +72,8 @@
         </div>
     </section>
 
-    <!-- Pinterest Profile Pins Section (auto-updates) -->
-    <section class="pinterest" aria-label="Pinterest Pins">
-        <div class="profile-wrapper">
-            <a class="pinterest-profile" data-pin-do="embedUser" data-pin-board-width="1100" data-pin-scale-height="540"
-                data-pin-scale-width="120" href="https://in.pinterest.com/sharmaflorist/"
-                aria-label="Sharma Florist Pinterest Profile Pins">
-            </a>
-        </div>
-    </section>
+    <!-- Slideshow Container -->
+    <div id="bouquet-slideshow-container"></div>
 
     <!-- Services Section -->
     <section class="services" id="services">
@@ -369,40 +362,7 @@
             setInterval(showRoseImage, 5000); // Show image every 5 seconds
         }, 1000);
 
-        // Lazy-load Pinterest profile embed script when section is near viewport
-        (function lazyLoadPinterestProfile() {
-            const target = document.querySelector('.pinterest .pinterest-profile');
-            if (!target) return;
-            const loadScript = () => {
-                if (document.getElementById('pinterest-script')) return;
-                const s = document.createElement('script');
-                s.defer = true;
-                s.async = true;
-                s.src = 'https://assets.pinterest.com/js/pinit.js';
-                s.id = 'pinterest-script';
-                document.body.appendChild(s);
-            };
-            if ('IntersectionObserver' in window) {
-                const io = new IntersectionObserver((entries, obs) => {
-                    if (entries.some(e => e.isIntersecting)) {
-                        loadScript();
-                        obs.disconnect();
-                    }
-                }, { rootMargin: '200px' });
-                io.observe(target);
-            } else {
-                // Fallback for older browsers
-                let loaded = false;
-                const onScroll = () => {
-                    if (loaded) return;
-                    loaded = true;
-                    loadScript();
-                    window.removeEventListener('scroll', onScroll);
-                };
-                window.addEventListener('scroll', onScroll, { passive: true });
-                setTimeout(() => { if (!loaded) { loaded = true; loadScript(); } }, 3000);
-            }
-        })();
+
     </script>
 </body>
 
