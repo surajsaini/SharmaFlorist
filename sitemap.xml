@@ -26,6 +26,11 @@
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://sharmaflorist.com/ghaziabad/valentines-day-flowers-delivery.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 
   <!-- Blog Main Page -->
   <url>
@@ -35,6 +40,11 @@
   </url>
 
   <!-- Blog Posts -->
+  <url>
+    <loc>https://sharmaflorist.com/blog/safed-gulab-mor-pankh-shadi-varmala-jaimala-ghaziabad.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
   <url>
     <loc>https://sharmaflorist.com/blog/shraddha-antim-sanskar-white-flower-ghaziabad-noida.html</loc>
     <priority>0.7</priority>
