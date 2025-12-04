@@ -1,19 +1,9 @@
 # Robots.txt for Sharma Florist
-# Allows search engines to crawl and index the website
-
+# Updated: 2024-12-04
+# Allows search engines and AI bots to crawl and index the website
 
 # Allow all bots
 User-agent: *
-Allow: /
-
-# AI Chatbots and Crawlers
-User-agent: GPTBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: CCBot
 Allow: /
 
 # Specify sitemap location
@@ -22,17 +12,79 @@ Sitemap: https://sharmaflorist.com/sitemap.xml
 # Crawl delay (optional - in seconds)
 Crawl-delay: 1
 
-# Specific rules for Google
+# ===== SEARCH ENGINES =====
+
+# Google
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 0
 
-# Specific rules for Bing
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
 
-# Block bad bots (examples)
+# Yahoo
+User-agent: Slurp
+Allow: /
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Yandex
+User-agent: YandexBot
+Allow: /
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+
+# ===== AI CRAWLERS & CHATBOTS =====
+
+# OpenAI GPT
+User-agent: GPTBot
+Allow: /
+
+# Google AI (Bard/Gemini)
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic Claude
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Common Crawl (used for AI training)
+User-agent: CCBot
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Microsoft Copilot
+User-agent: Applebot
+Allow: /
+
+# ===== BLOCK BAD/UNWANTED BOTS =====
+
 User-agent: MJ12bot
 Disallow: /
 
@@ -44,3 +96,25 @@ Disallow: /
 
 User-agent: DotBot
 Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+# ===== ALLOW IMPORTANT DIRECTORIES =====
+
+# Allow all images for image search
+User-agent: *
+Allow: /flower-bouquet/
+Allow: /flower-decoration/
+Allow: /images/
+Allow: /blog/images/
+
+# Allow CSS/JS for proper rendering
+Allow: /*.css
+Allow: /*.js

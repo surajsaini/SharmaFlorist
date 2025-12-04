@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
   <!-- Main Pages -->
   <url>
     <loc>https://sharmaflorist.com/</loc>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
+    <lastmod>2024-12-04</lastmod>
   </url>
   <url>
     <loc>https://sharmaflorist.com/index.html</loc>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
+    <lastmod>2024-12-04</lastmod>
   </url>
   <url>
     <loc>https://sharmaflorist.com/rose-n-petals.html</loc>
@@ -26,10 +30,30 @@
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
+
+  <!-- Ghaziabad Location Pages -->
   <url>
     <loc>https://sharmaflorist.com/ghaziabad/valentines-day-flowers-delivery.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sharmaflorist.com/ghaziabad/flower-bouquet-order-online.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2024-12-04</lastmod>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-bouquet/Karwa-Chauth-gift-flower-bouquet-delivery-ghaziabad.jpg</image:loc>
+      <image:title>Karwa Chauth Special Flower Bouquet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-bouquet/50-birthday-bouquet-flower-shop-near-me.jpg</image:loc>
+      <image:title>50th Birthday Grand Bouquet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-bouquet/heart-shape-flower-bouquet-same-day-delivery-ghaziabad-greater-noida-west.jpg</image:loc>
+      <image:title>Heart Shape Flower Bouquet</image:title>
+    </image:image>
   </url>
 
   <!-- Blog Main Page -->
@@ -135,5 +159,71 @@
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
-</urlset>
 
+  <!-- Product Images for SEO -->
+  <url>
+    <loc>https://sharmaflorist.com/flower-bouquet/</loc>
+    <priority>0.6</priority>
+    <changefreq>weekly</changefreq>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-bouquet/50-birthday-bouquet-flower-shop-near-me.jpg</image:loc>
+      <image:title>50th Birthday Flower Bouquet Ghaziabad</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-bouquet/50-white-rose-big-size-flower-bouquet-same-day-delivery-indrapuram.jpg</image:loc>
+      <image:title>50 White Rose Big Bouquet Indirapuram Delivery</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-bouquet/big-size-flower-bouquet-red-rose-LOVE-GHAZIABAD.jpg</image:loc>
+      <image:title>Big Red Rose Love Bouquet Ghaziabad</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-bouquet/big-size-rose-bouquet-same-day-delivery-ghaziabad-valentine.jpg</image:loc>
+      <image:title>Valentine Big Rose Bouquet Ghaziabad</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-bouquet/chocolate-ferrero-rocher-bouquet-online-fast-order-raj-nagar-gzb.jpg</image:loc>
+      <image:title>Ferrero Rocher Chocolate Bouquet Raj Nagar</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-bouquet/heart-shape-flower-bouquet-same-day-delivery-ghaziabad-greater-noida-west.jpg</image:loc>
+      <image:title>Heart Shape Flower Bouquet Ghaziabad</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-bouquet/heart-shape-red-rose-baby-breath-bouquet-raj--nagar-extension.jpg</image:loc>
+      <image:title>Heart Shape Red Rose Baby Breath Bouquet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-bouquet/sunflower-bouquet-delivery-ghaziabad.jpg</image:loc>
+      <image:title>Sunflower Bouquet Delivery Ghaziabad</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-bouquet/white-lily-flower-bouquet-same-day-delivery.jpg</image:loc>
+      <image:title>White Lily Flower Bouquet Same Day Delivery</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-bouquet/yellow-lilly-bouquet-same-day-delivery.jpg</image:loc>
+      <image:title>Yellow Lily Bouquet Same Day Delivery</image:title>
+    </image:image>
+  </url>
+
+  <!-- Flower Decoration Images -->
+  <url>
+    <loc>https://sharmaflorist.com/flower-decoration/</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-decoration/Ring-Ceremony-Anniversary-Celebration-Decor.jpg</image:loc>
+      <image:title>Ring Ceremony Anniversary Flower Decoration</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-decoration/safed-gulab-mor-pankh-shadi-varmala-jaimala.jpg</image:loc>
+      <image:title>Wedding Jaimala Varmala White Rose</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-decoration/shaadi-jai-mala-order-online-ghaziabad.jpg</image:loc>
+      <image:title>Wedding Jaimala Order Online Ghaziabad</image:title>
+    </image:image>
+  </url>
+
+</urlset>
