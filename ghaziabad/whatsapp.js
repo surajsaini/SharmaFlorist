@@ -9,6 +9,7 @@ function buyOnWhatsApp(productCode) {
 document.addEventListener('DOMContentLoaded', function () {
     const filterTags = document.querySelectorAll('.filter-tag');
     const productCards = document.querySelectorAll('.product-card');
+    const galleryItems = document.querySelectorAll('.gallery-item');
 
     if (filterTags.length === 0) return; // Exit if no filter tags on page
 
@@ -20,43 +21,80 @@ document.addEventListener('DOMContentLoaded', function () {
             filterTags.forEach(t => t.classList.remove('active'));
             this.classList.add('active');
 
-            // Filter products
             let visibleCount = 0;
-            productCards.forEach(card => {
-                if (filter === 'all') {
-                    card.classList.remove('hidden');
-                    visibleCount++;
-                } else {
-                    // Check if any tag in the product matches the filter
-                    const productTags = card.querySelectorAll('.product-tags .tag');
-                    let hasMatch = false;
-                    productTags.forEach(productTag => {
-                        if (productTag.textContent.toLowerCase().includes(filter.toLowerCase())) {
-                            hasMatch = true;
-                        }
-                    });
 
-                    if (hasMatch) {
+            // Filter product cards (for bouquet page)
+            if (productCards.length > 0) {
+                productCards.forEach(card => {
+                    if (filter === 'all') {
                         card.classList.remove('hidden');
                         visibleCount++;
                     } else {
-                        card.classList.add('hidden');
-                    }
-                }
-            });
+                        // Check if any tag in the product matches the filter
+                        const productTags = card.querySelectorAll('.product-tags .tag');
+                        let hasMatch = false;
+                        productTags.forEach(productTag => {
+                            if (productTag.textContent.toLowerCase().includes(filter.toLowerCase())) {
+                                hasMatch = true;
+                            }
+                        });
 
-            // Show/hide "no products" message
-            let noProductsMsg = document.querySelector('.no-products-message');
-            if (visibleCount === 0) {
-                if (!noProductsMsg) {
-                    noProductsMsg = document.createElement('div');
-                    noProductsMsg.className = 'no-products-message';
-                    noProductsMsg.textContent = 'No products found for this filter. Try "All" to see all products.';
-                    document.querySelector('.product-grid').appendChild(noProductsMsg);
+                        if (hasMatch) {
+                            card.classList.remove('hidden');
+                            visibleCount++;
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    }
+                });
+
+                // Show/hide "no products" message for product grid
+                let noProductsMsg = document.querySelector('.no-products-message');
+                if (visibleCount === 0) {
+                    if (!noProductsMsg) {
+                        noProductsMsg = document.createElement('div');
+                        noProductsMsg.className = 'no-products-message';
+                        noProductsMsg.textContent = 'No products found for this filter. Try "All" to see all products.';
+                        document.querySelector('.product-grid').appendChild(noProductsMsg);
+                    }
+                    noProductsMsg.style.display = 'block';
+                } else if (noProductsMsg) {
+                    noProductsMsg.style.display = 'none';
                 }
-                noProductsMsg.style.display = 'block';
-            } else if (noProductsMsg) {
-                noProductsMsg.style.display = 'none';
+            }
+
+            // Filter gallery items (for gallery page)
+            if (galleryItems.length > 0) {
+                visibleCount = 0;
+                galleryItems.forEach(item => {
+                    if (filter === 'all') {
+                        item.classList.remove('hidden');
+                        visibleCount++;
+                    } else {
+                        // Check if data-tags contains the filter
+                        const itemTags = item.dataset.tags || '';
+                        if (itemTags.toLowerCase().includes(filter.toLowerCase())) {
+                            item.classList.remove('hidden');
+                            visibleCount++;
+                        } else {
+                            item.classList.add('hidden');
+                        }
+                    }
+                });
+
+                // Show/hide "no items" message for gallery
+                let noItemsMsg = document.querySelector('.no-items-message');
+                if (visibleCount === 0) {
+                    if (!noItemsMsg) {
+                        noItemsMsg = document.createElement('div');
+                        noItemsMsg.className = 'no-products-message no-items-message';
+                        noItemsMsg.textContent = 'No photos found for this filter. Try "All" to see all photos.';
+                        document.querySelector('.masonry-grid').appendChild(noItemsMsg);
+                    }
+                    noItemsMsg.style.display = 'block';
+                } else if (noItemsMsg) {
+                    noItemsMsg.style.display = 'none';
+                }
             }
         });
     });
@@ -97,6 +135,14 @@ function initLightbox() {
     // Add click listeners to all product images
     const productImages = document.querySelectorAll('.product-image');
     productImages.forEach(img => {
+        img.addEventListener('click', function () {
+            openLightbox(this.src, this.alt);
+        });
+    });
+
+    // Add click listeners to all gallery images
+    const galleryImages = document.querySelectorAll('.gallery-image');
+    galleryImages.forEach(img => {
         img.addEventListener('click', function () {
             openLightbox(this.src, this.alt);
         });

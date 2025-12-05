@@ -38,6 +38,24 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://sharmaflorist.com/ghaziabad/flower-shop-photo-gallery.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2024-12-04</lastmod>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-decoration/wedding-shaadi-stage-flower-decoration-nearme.jpg</image:loc>
+      <image:title>Wedding Stage Flower Decoration Ghaziabad</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-decoration/wedding-car-flower-decoration-doorstep-service.jpg</image:loc>
+      <image:title>Wedding Car Flower Decoration Doorstep Service</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-decoration/safed-gulab-mor-pankh-shadi-varmala-jaimala.jpg</image:loc>
+      <image:title>Wedding Jaimala Varmala White Rose Peacock Feather</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://sharmaflorist.com/ghaziabad/flower-bouquet-order-online.html</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>

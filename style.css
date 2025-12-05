@@ -1497,3 +1497,63 @@ nav ul li a {
     }
 }
 
+/* Pinterest-style Masonry Gallery */
+.gallery-container {
+    background: var(--white);
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(220, 180, 220, 0.08);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.masonry-grid {
+    column-count: 4;
+    column-gap: 15px;
+}
+
+.gallery-item {
+    break-inside: avoid;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--soft-pink);
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.gallery-item.hidden {
+    display: none;
+}
+
+/* Responsive masonry columns */
+@media (max-width: 1200px) {
+    .masonry-grid {
+        column-count: 3;
+    }
+}
+
+@media (max-width: 900px) {
+    .masonry-grid {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 500px) {
+    .masonry-grid {
+        column-count: 1;
+        column-gap: 10px;
+    }
+    
+    .gallery-item {
+        margin-bottom: 10px;
+    }
+    
+    .gallery-container {
+        padding: 1rem;
+    }
+}

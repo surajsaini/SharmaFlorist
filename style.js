@@ -87,7 +87,7 @@ if (backToTopBtn) {
 
 // See More Services Functionality
 document.addEventListener('DOMContentLoaded', function () {
-    const serviceCards = document.querySelectorAll('.service-card');
+    const serviceCards = document.querySelectorAll('#services .service-card');
     const seeMoreBtn = document.querySelector('.see-more-btn');
     const seeMoreContainer = document.querySelector('.see-more-container');
 
