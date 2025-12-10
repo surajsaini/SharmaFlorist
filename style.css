@@ -1545,15 +1545,20 @@ nav ul li a {
 
 @media (max-width: 500px) {
     .masonry-grid {
-        column-count: 1;
-        column-gap: 10px;
+        column-count: 2;
+        column-gap: 6px;
     }
-    
+
     .gallery-item {
-        margin-bottom: 10px;
+        margin-bottom: 6px;
+        border-radius: 8px;
     }
-    
+
+    .gallery-item img {
+        border-radius: 8px;
+    }
+
     .gallery-container {
-        padding: 1rem;
+        padding: 0.5rem;
     }
 }
