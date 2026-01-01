@@ -1562,3 +1562,40 @@ nav ul li a {
         padding: 0.5rem;
     }
 }
+
+/* Date Card Styles for Muhurat Page */
+.date-card {
+    background: var(--soft-green);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+    text-align: left;
+    line-height: 1.6;
+    border-left: 4px solid #7bb274;
+}
+
+.date-card strong {
+    color: #b85c8c;
+    font-size: 1.05rem;
+}
+
+.date-card:last-child {
+    margin-bottom: 0;
+}
+
+/* Month tile specific - increase max-height for more content */
+.month-tile .about-content.active {
+    max-height: 2000px;
+    overflow-y: auto;
+}
+
+@media (max-width: 600px) {
+    .date-card {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .date-card strong {
+        font-size: 0.95rem;
+    }
+}

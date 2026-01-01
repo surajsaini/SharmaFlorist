@@ -91,16 +91,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const seeMoreBtn = document.querySelector('.see-more-btn');
     const seeMoreContainer = document.querySelector('.see-more-container');
 
-    // Initial state: hide cards after the 6th one
-    if (serviceCards.length > 6) {
-        serviceCards.forEach((card, index) => {
-            if (index >= 6) {
-                card.classList.add('hidden');
-            }
-        });
-    } else {
-        // If 6 or fewer cards, hide the button container if it exists
-        if (seeMoreContainer) {
+    // Only apply hide logic if See More button exists on the page
+    if (seeMoreBtn && seeMoreContainer) {
+        // Initial state: hide cards after the 6th one
+        if (serviceCards.length > 6) {
+            serviceCards.forEach((card, index) => {
+                if (index >= 6) {
+                    card.classList.add('hidden');
+                }
+            });
+        } else {
+            // If 6 or fewer cards, hide the button container
             seeMoreContainer.style.display = 'none';
         }
     }
@@ -197,3 +198,22 @@ document.addEventListener('DOMContentLoaded', function () {
 }
 
 );
+
+// Month Tile Toggle Functionality
+document.addEventListener('DOMContentLoaded', function () {
+    const monthTiles = document.querySelectorAll('.month-tile .about-header');
+
+    monthTiles.forEach(header => {
+        header.addEventListener('click', function () {
+            const parentTile = this.parentElement;
+            const content = parentTile.querySelector('.about-content');
+
+            // Toggle active class on parent
+            parentTile.classList.toggle('active');
+
+            // Toggle content visibility
+            content.classList.toggle('active');
+        });
+    });
+});
+
