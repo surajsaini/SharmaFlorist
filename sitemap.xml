@@ -30,10 +30,15 @@
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://sharmaflorist.com/shubh-marriage-dates-with-muhurat.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 
   <!-- Ghaziabad Location Pages -->
   <url>
-    <loc>https://sharmaflorist.com/ghaziabad/valentines-day-flowers-delivery.html</loc>
+    <loc>https://sharmaflorist.com/ghaziabad/valentines-day-flower-delivery.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
@@ -41,7 +46,7 @@
     <loc>https://sharmaflorist.com/ghaziabad/flower-shop-photo-gallery.html</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2024-12-04</lastmod>
+    <lastmod>2026-01-01</lastmod>
     <image:image>
       <image:loc>https://sharmaflorist.com/flower-decoration/wedding-shaadi-stage-flower-decoration-nearme.jpg</image:loc>
       <image:title>Wedding Stage Flower Decoration Ghaziabad</image:title>
@@ -53,6 +58,14 @@
     <image:image>
       <image:loc>https://sharmaflorist.com/flower-decoration/safed-gulab-mor-pankh-shadi-varmala-jaimala.jpg</image:loc>
       <image:title>Wedding Jaimala Varmala White Rose Peacock Feather</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-decoration/sagai-mangni-flower-decoration-crossing-ghaziabad.jpeg</image:loc>
+      <image:title>Sagai Mangni Flower Decoration Crossing Ghaziabad</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-decoration/sagai-mangni-phool-sajawat-ghar-per-raj-nagar-extension.jpeg</image:loc>
+      <image:title>Sagai Mangni Phool Sajawat Ghar Per Raj Nagar Extension</image:title>
     </image:image>
   </url>
   <url>
@@ -176,6 +189,27 @@
     <loc>https://sharmaflorist.com/blog/corporate-flower-decoration-ghaziabad-noida-greater-Noida.html</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sharmaflorist.com/blog/sagai-ring-ceremony-flower-decoration-ghaziabad.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/blog/images/sagai-mangni-phool-sajawat-ghar-per-raj-nagar-extension.jpeg</image:loc>
+      <image:title>Sagai Mangni Flower Decoration at Home in Raj Nagar Extension Ghaziabad</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/blog/images/sagai-mangni-flower-decoration-crossing-ghaziabad.jpeg</image:loc>
+      <image:title>Sagai Mangni Flower Decoration in Crossing Republik Ghaziabad</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/blog/images/ring-ceremony-backdrop-table-pot-flower-decoration-service-gaur-city-1.jpeg</image:loc>
+      <image:title>Ring Ceremony Backdrop and Table Pot Flower Decoration</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/blog/images/ring-ceremony-backdrop-flower-decoration-service-gaur-city-2.jpeg</image:loc>
+      <image:title>Ring Ceremony Stage Backdrop Flower Decoration</image:title>
+    </image:image>
   </url>
 
   <!-- Product Images for SEO -->
