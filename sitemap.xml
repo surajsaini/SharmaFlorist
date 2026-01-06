@@ -96,6 +96,23 @@
 
   <!-- Blog Posts -->
   <url>
+    <loc>https://sharmaflorist.com/blog/shok-samaroh-flower-decoration-rdc-ghaziabad.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-decoration/memorial-ceremony-crossing-republik-flower-service.jpg</image:loc>
+      <image:title>Memorial Ceremony Flower Decoration</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-decoration/shok-amaroh-white-flower-decoartion-ghaziabad.jpeg</image:loc>
+      <image:title>Shok Samaroh White Flower Decoration</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-decoration/condolence-ceremony-decoartion-raj-nagar-gzb.jpeg</image:loc>
+      <image:title>Condolence Ceremony Decoration in Raj Nagar</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://sharmaflorist.com/blog/safed-gulab-mor-pankh-shadi-varmala-jaimala-ghaziabad.html</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
