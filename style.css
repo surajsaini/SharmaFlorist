@@ -1594,8 +1594,49 @@ nav ul li a {
         padding: 0.8rem;
         font-size: 0.9rem;
     }
-    
+
     .date-card strong {
         font-size: 0.95rem;
+    }
+}
+
+.shop-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    border: 1px solid #e3c6f7;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+
+.shop-item {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #e3c6f7;
+    border-right: 1px solid #e3c6f7;
+    font-size: 0.95rem;
+    text-align: left;
+    background: var(--white);
+}
+
+.shop-item:nth-child(2n) {
+    border-right: none;
+}
+
+.shop-item:nth-last-child(-n+2) {
+    border-bottom: none;
+}
+
+@media (max-width: 600px) {
+    .shop-list {
+        grid-template-columns: 1fr;
+    }
+
+    .shop-item {
+        border-right: none;
+    }
+
+    .shop-item:last-child {
+        border-bottom: none;
     }
 }

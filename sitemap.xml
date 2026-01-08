@@ -30,15 +30,16 @@
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
-  <url>
-    <loc>https://sharmaflorist.com/shubh-marriage-dates-with-muhurat.html</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
+  
 
   <!-- Ghaziabad Location Pages -->
   <url>
     <loc>https://sharmaflorist.com/ghaziabad/valentines-day-flower-delivery.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sharmaflorist.com/ghaziabad/shubh-marriage-dates-with-muhurat.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
