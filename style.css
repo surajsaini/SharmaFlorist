@@ -1640,3 +1640,24 @@ nav ul li a {
         border-bottom: none;
     }
 }
+
+/* Owner Photo */
+.owner-photo {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(180, 220, 180, 0.10);
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+/* Explore More Section */
+.explore-more {
+    padding: 2rem 1rem;
+}
+
+.explore-more .services-grid {
+    max-width: 800px;
+    margin: 0 auto;
+}

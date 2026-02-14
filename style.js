@@ -217,3 +217,67 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// Gentle falling flower animation (MOBILE ONLY)
+(function () {
+    const petalSVGs = [
+        '<svg width="28" height="28" viewBox="0 0 28 28"><ellipse cx="14" cy="14" rx="8" ry="14" fill="#f8e1e7"/><ellipse cx="14" cy="8" rx="4" ry="7" fill="#e3c6f7"/></svg>',
+        '<svg width="24" height="24" viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="6" ry="10" fill="#eafaf1"/><ellipse cx="12" cy="7" rx="3" ry="5" fill="#b85c8c" opacity="0.13"/></svg>',
+        '<svg width="20" height="20" viewBox="0 0 20 20"><ellipse cx="10" cy="10" rx="5" ry="8" fill="#fbeff3"/><ellipse cx="10" cy="5" rx="2.5" ry="4" fill="#7bb274" opacity="0.13"/></svg>'
+    ];
+
+    let lastPetalTime = 0;
+    let lastScrollTime = 0;
+
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    function createPetal() {
+        const now = Date.now();
+        if (now - lastPetalTime < 100) return;
+        lastPetalTime = now;
+
+        const petal = document.createElement('div');
+        petal.className = 'petal';
+        petal.innerHTML = petalSVGs[Math.floor(Math.random() * petalSVGs.length)];
+
+        petal.style.left = (Math.random() * window.innerWidth) + 'px';
+        petal.style.top = '-30px';
+        petal.style.animationDuration = (3 + Math.random() * 2) + 's';
+
+        document.body.appendChild(petal);
+        setTimeout(() => petal.remove(), 5000);
+    }
+
+    if (isMobile) {
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+            const now = Date.now();
+            if (now - lastScrollTime < 200) return;
+            lastScrollTime = now;
+
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                const petalCount = Math.floor(Math.random() * 3) + 2;
+                for (let i = 0; i < petalCount; i++) {
+                    setTimeout(createPetal, i * 100);
+                }
+            }, 100);
+        });
+    }
+})();
+
+// Rose N Petals image zoom animation every 10 seconds
+function showRoseImage() {
+    const popup = document.createElement('div');
+    popup.className = 'rose-image-popup';
+    popup.innerHTML = `
+        <img src="valentines-day-ghaziabad.png" alt="Valentine's Day Flower Delivery Ghaziabad" loading="lazy" style="max-width: 400px; max-height: 300px; width: auto; height: auto; object-fit: contain; opacity: 0.7;">
+    `;
+    document.body.appendChild(popup);
+    setTimeout(() => popup.remove(), 3000);
+}
+
+// Start the interval after page loads
+setTimeout(() => {
+    showRoseImage(); // Show first image immediately
+    setInterval(showRoseImage, 10000); // Show image every 10 seconds
+}, 1000);
