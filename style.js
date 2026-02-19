@@ -208,14 +208,84 @@ document.addEventListener('DOMContentLoaded', function () {
             const parentTile = this.parentElement;
             const content = parentTile.querySelector('.about-content');
 
-            // Toggle active class on parent
-            parentTile.classList.toggle('active');
-
-            // Toggle content visibility
-            content.classList.toggle('active');
+            if (content.classList.contains('active')) {
+                // Closing: set max-height to current scrollHeight first, then to 0
+                content.style.maxHeight = content.scrollHeight + 'px';
+                // Force a reflow so the browser registers the current max-height
+                content.offsetHeight;
+                content.style.maxHeight = '0px';
+                content.classList.remove('active');
+                parentTile.classList.remove('active');
+            } else {
+                // Opening: set max-height to scrollHeight for smooth expand
+                content.classList.add('active');
+                parentTile.classList.add('active');
+                content.style.maxHeight = content.scrollHeight + 'px';
+            }
         });
     });
 });
 
 
+// ===== Reusable Load More =====
+// Usage: initLoadMore('.masonry-grid', '.gallery-item', 12)
+//   containerSel  – CSS selector for the grid/container
+//   itemSel       – CSS selector for child items inside container
+//   batchSize     – how many items to show initially & per click
+function initLoadMore(containerSel, itemSel, batchSize) {
+    const container = document.querySelector(containerSel);
+    if (!container) return;
 
+    let visibleCount = batchSize;
+
+    // Create Load More button
+    const btn = document.createElement('button');
+    btn.className = 'load-more-btn';
+    btn.textContent = 'Load More';
+    container.parentElement.insertBefore(btn, container.nextSibling);
+
+    function applyLoadMore() {
+        const items = container.querySelectorAll(itemSel);
+        let shown = 0;
+
+        items.forEach(item => {
+            // Skip items hidden by filter (they have 'hidden' class from filter logic)
+            if (item.classList.contains('filter-hidden')) {
+                item.style.display = 'none';
+                return;
+            }
+            shown++;
+            if (shown <= visibleCount) {
+                item.style.display = '';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+
+        // Show/hide button
+        btn.style.display = (shown > visibleCount) ? '' : 'none';
+    }
+
+    btn.addEventListener('click', function () {
+        visibleCount += batchSize;
+        applyLoadMore();
+    });
+
+    // Listen for filter changes (dispatched by filter logic)
+    document.addEventListener('loadmore-reset', function () {
+        visibleCount = batchSize;
+        applyLoadMore();
+    });
+
+    // Initial apply
+    applyLoadMore();
+}
+
+// Auto-init on DOMContentLoaded for pages that have a [data-loadmore] container
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('[data-loadmore]').forEach(function (container) {
+        var batchSize = parseInt(container.dataset.loadmore, 10) || 12;
+        var itemSel = container.dataset.loadmoreItem || ':scope > *';
+        initLoadMore('#' + container.id, itemSel, batchSize);
+    });
+});

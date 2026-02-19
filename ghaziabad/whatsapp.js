@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 productCards.forEach(card => {
                     if (filter === 'all') {
                         card.classList.remove('hidden');
+                        card.classList.remove('filter-hidden');
                         visibleCount++;
                     } else {
                         // Check if any tag in the product matches the filter
@@ -41,9 +42,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         if (hasMatch) {
                             card.classList.remove('hidden');
+                            card.classList.remove('filter-hidden');
                             visibleCount++;
                         } else {
                             card.classList.add('hidden');
+                            card.classList.add('filter-hidden');
                         }
                     }
                 });
@@ -69,15 +72,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 galleryItems.forEach(item => {
                     if (filter === 'all') {
                         item.classList.remove('hidden');
+                        item.classList.remove('filter-hidden');
                         visibleCount++;
                     } else {
                         // Check if data-tags contains the filter
                         const itemTags = item.dataset.tags || '';
                         if (itemTags.toLowerCase().includes(filter.toLowerCase())) {
                             item.classList.remove('hidden');
+                            item.classList.remove('filter-hidden');
                             visibleCount++;
                         } else {
                             item.classList.add('hidden');
+                            item.classList.add('filter-hidden');
                         }
                     }
                 });
@@ -96,6 +102,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     noItemsMsg.style.display = 'none';
                 }
             }
+
+            // Reset Load More when filter changes
+            document.dispatchEvent(new Event('loadmore-reset'));
         });
     });
 
