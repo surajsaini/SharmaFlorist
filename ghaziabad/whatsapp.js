@@ -1,6 +1,9 @@
+
+
 function buyOnWhatsApp(productCode) {
     const phoneNumber = "919599308501";
-    const message = `Hello, I am interested in buying the product with code: ${productCode}. Please provide more details.`;
+    const productLink = `https://sharmaflorist.com/ghaziabad/order-flower-bouquet-online.html#${productCode}`;
+    const message = `Hello, I am interested in buying the product with code: ${productCode}.\n\nProduct Link: ${productLink}\n\nPlease provide more details.`;
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
 }

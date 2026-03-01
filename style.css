@@ -1225,6 +1225,17 @@ footer {
     justify-content: space-between;
 }
 
+.product-card:target {
+    border: 2px solid #ff4757;
+    /* Highlight color */
+    background-color: #fffaf0;
+    /* Subtle background change */
+    transform: scale(1.02);
+    /* Slight pop-out effect */
+    transition: all 0.3s ease;
+    outline: none;
+}
+
 .product-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 24px rgba(180, 220, 180, 0.2);
