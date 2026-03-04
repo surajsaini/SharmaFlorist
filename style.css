@@ -1692,3 +1692,138 @@ nav ul li a {
     max-width: 800px;
     margin: 0 auto;
 }
+
+/* ============================================================
+   Shared styles for Wedding/Decoration landing pages
+   (wedding-car-decoration, first-night-room-decoration, wedding-jai-mala)
+   ============================================================ */
+
+/* 2x2 image grid */
+.service-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.service-images img {
+    width: calc(50% - 10px);
+    max-width: 380px;
+    border-radius: 10px;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease;
+}
+
+.service-images img:hover {
+    transform: scale(1.03);
+}
+
+@media (max-width: 600px) {
+    .service-images img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Pricing table */
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.pricing-table th,
+.pricing-table td {
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+}
+
+.pricing-table tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+/* Service area cards */
+.area-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.area-card {
+    background: #fdfaf6;
+    padding: 15px;
+    border-radius: 8px;
+    flex: 1 1 200px;
+    min-width: 240px;
+    border-left: 4px solid #b85c8c;
+}
+
+.area-card h4 {
+    margin-top: 0;
+    color: #7b3060;
+}
+
+.area-card p {
+    margin: 5px 0 0 0;
+    font-size: 0.95rem;
+}
+
+/* FAQ accordion items */
+.faq-item {
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #fdfaf6;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.faq-item summary {
+    font-weight: bold;
+    cursor: pointer;
+    color: #7b3060;
+}
+
+.faq-item p {
+    margin-top: 10px;
+    font-size: 0.95rem;
+}
+
+/* In-page CTA box */
+.page-cta-box {
+    margin-top: 40px;
+    padding: 25px;
+    background-color: #fdfaf6;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.page-cta-box h3 {
+    margin-top: 0;
+    color: #7b3060;
+}
+
+.page-cta-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 28px;
+    background-color: #b85c8c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.page-cta-link:hover {
+    background-color: #7b3060;
+    color: #fff;
+}
