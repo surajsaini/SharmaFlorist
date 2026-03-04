@@ -112,7 +112,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://sharmaflorist.com/ghaziabad/flower-bouquet-order-online.html</loc>
+    <loc>https://sharmaflorist.com/ghaziabad/order-flower-bouquet-online.html</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
     <lastmod>2024-12-04</lastmod>
@@ -129,6 +129,25 @@
       <image:title>Heart Shape Flower Bouquet</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://sharmaflorist.com/ghaziabad/flower-market.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sharmaflorist.com/ghaziabad/rose-day-flower-delivery.html</loc>
+    <priority>0.8</priority>
+    <changefreq>yearly</changefreq>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-bouquet/50-white-rose-big-size-flower-bouquet-same-day-delivery-indrapuram.jpg</image:loc>
+      <image:title>Rose Day Special Flower Bouquet Delivery Ghaziabad</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sharmaflorist.com/ghaziabad/womens-day-flower-delivery.html</loc>
+    <priority>0.8</priority>
+    <changefreq>yearly</changefreq>
+  </url>
 
   <!-- Blog Main Page -->
   <url>
@@ -138,6 +157,26 @@
   </url>
 
   <!-- Blog Posts -->
+  <url>
+    <loc>https://sharmaflorist.com/blog/greater-noida-flower-show-2026-date.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sharmaflorist.com/blog/noida-flower-show-2026-shivalik-park.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sharmaflorist.com/blog/rose-day-flower-delivery-ghaziabad.html</loc>
+    <priority>0.7</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://sharmaflorist.com/blog/valentines-day-flower-delivery-ghaziabad.html</loc>
+    <priority>0.7</priority>
+    <changefreq>yearly</changefreq>
+  </url>
   <url>
     <loc>https://sharmaflorist.com/blog/shok-samaroh-flower-decoration-rdc-ghaziabad.html</loc>
     <priority>0.7</priority>
