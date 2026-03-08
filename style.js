@@ -3,7 +3,6 @@ const navLinks = document.querySelectorAll('.nav-link');
 navLinks.forEach(link => {
     link.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
-        // Check if it's an anchor link
         if (href.startsWith('#')) {
             e.preventDefault();
             const target = document.querySelector(href);
@@ -30,7 +29,6 @@ window.addEventListener('scroll', () => {
         }
     });
 
-    // Show/hide back to top button
     const backToTop = document.getElementById('backToTop');
     if (backToTop) {
         if (window.scrollY > 300) {
@@ -50,50 +48,13 @@ if (backToTopBtn) {
     });
 }
 
-// Lazy-load Pinterest profile embed script when section is near viewport
-(function lazyLoadPinterestProfile() {
-    const target = document.querySelector('.pinterest .pinterest-profile');
-    if (!target) return;
-    const loadScript = () => {
-        if (document.getElementById('pinterest-script')) return;
-        const s = document.createElement('script');
-        s.defer = true;
-        s.async = true;
-        s.src = 'https://assets.pinterest.com/js/pinit.js';
-        s.id = 'pinterest-script';
-        document.body.appendChild(s);
-    };
-    if ('IntersectionObserver' in window) {
-        const io = new IntersectionObserver((entries, obs) => {
-            if (entries.some(e => e.isIntersecting)) {
-                loadScript();
-                obs.disconnect();
-            }
-        }, { rootMargin: '200px' });
-        io.observe(target);
-    } else {
-        // Fallback for older browsers
-        let loaded = false;
-        const onScroll = () => {
-            if (loaded) return;
-            loaded = true;
-            loadScript();
-            window.removeEventListener('scroll', onScroll);
-        };
-        window.addEventListener('scroll', onScroll, { passive: true });
-        setTimeout(() => { if (!loaded) { loaded = true; loadScript(); } }, 3000);
-    }
-})();
-
 // See More Services Functionality
 document.addEventListener('DOMContentLoaded', function () {
     const serviceCards = document.querySelectorAll('#services .service-card');
     const seeMoreBtn = document.querySelector('.see-more-btn');
     const seeMoreContainer = document.querySelector('.see-more-container');
 
-    // Only apply hide logic if See More button exists on the page
     if (seeMoreBtn && seeMoreContainer) {
-        // Initial state: hide cards after the 6th one
         if (serviceCards.length > 6) {
             serviceCards.forEach((card, index) => {
                 if (index >= 6) {
@@ -101,103 +62,21 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
         } else {
-            // If 6 or fewer cards, hide the button container
             seeMoreContainer.style.display = 'none';
         }
     }
 
-    // Click event for "See More" button
     if (seeMoreBtn) {
         seeMoreBtn.addEventListener('click', function () {
             serviceCards.forEach(card => {
                 card.classList.remove('hidden');
             });
-            // Hide the button after showing all services
             if (seeMoreContainer) {
                 seeMoreContainer.style.display = 'none';
             }
         });
     }
-
-
-    // Flower Bouquet Slideshow Logic
-    const slideshowContainer = document.getElementById('bouquet-slideshow-container');
-
-    if (slideshowContainer) {
-
-        let slideIndex = 0;
-        let autoSlideInterval;
-
-        // Embedded images array (to avoid CORS issues with file:// protocol)
-        const bouquetImages = [
-            "Karwa-Chauth-gift-flower-bouquet-delivery-ghaziabad.jpg",
-            "artificial-purple-flower-with-pot-shop-ghaziabad.jpg",
-            "karwachauth-gift-gajra-flower-delivery-service-ghaziabad.jpg",
-            "mix-rose-flower-bouquet-instant-delivery-gaur-city.jpg",
-            "white-lily-flower-bouquet-same-day-delivery.jpg",
-            "white-lily-pink-rose-small-bunch-service.jpg",
-            "yellow-lilly-bookey-delivery-in-kavi-nagar-ghaziabad.jpg"
-        ];
-
-        initSlideshow(bouquetImages);
-
-        // Initialize Slideshow
-        function initSlideshow(bouquetImages) {
-            let slidesHtml = '';
-
-            bouquetImages.forEach((img, index) => {
-                slidesHtml += `
-                <div class="mySlides fade">
-                    <img src="flower-bouquet/${img}" alt="Flower Bouquet ${index + 1}">
-                </div>
-            `;
-            });
-
-            slideshowContainer.innerHTML = `
-            ${slidesHtml}
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        `;
-
-            showSlides(slideIndex);
-            startAutoSlide();
-        }
-
-        // Global controls
-        window.plusSlides = function (n) {
-            showSlides(slideIndex += n);
-            resetAutoSlide();
-        };
-
-        function showSlides(n) {
-            let slides = document.getElementsByClassName("mySlides");
-
-            if (n >= slides.length) { slideIndex = 0 }
-            if (n < 0) { slideIndex = slides.length - 1 }
-
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-
-            if (slides[slideIndex]) {
-                slides[slideIndex].style.display = "flex";
-            }
-        }
-
-        function startAutoSlide() {
-            autoSlideInterval = setInterval(() => {
-                plusSlides(1);
-            }, 4000); // 4 seconds
-        }
-
-        function resetAutoSlide() {
-            clearInterval(autoSlideInterval);
-            startAutoSlide();
-        }
-    }
-}
-
-);
+});
 
 // Month Tile Toggle Functionality
 document.addEventListener('DOMContentLoaded', function () {
@@ -209,15 +88,12 @@ document.addEventListener('DOMContentLoaded', function () {
             const content = parentTile.querySelector('.about-content');
 
             if (content.classList.contains('active')) {
-                // Closing: set max-height to current scrollHeight first, then to 0
                 content.style.maxHeight = content.scrollHeight + 'px';
-                // Force a reflow so the browser registers the current max-height
                 content.offsetHeight;
                 content.style.maxHeight = '0px';
                 content.classList.remove('active');
                 parentTile.classList.remove('active');
             } else {
-                // Opening: set max-height to scrollHeight for smooth expand
                 content.classList.add('active');
                 parentTile.classList.add('active');
                 content.style.maxHeight = content.scrollHeight + 'px';
@@ -226,19 +102,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
-// ===== Reusable Load More =====
-// Usage: initLoadMore('.masonry-grid', '.gallery-item', 12)
-//   containerSel  – CSS selector for the grid/container
-//   itemSel       – CSS selector for child items inside container
-//   batchSize     – how many items to show initially & per click
+// Reusable Load More
 function initLoadMore(containerSel, itemSel, batchSize) {
     const container = document.querySelector(containerSel);
     if (!container) return;
 
     let visibleCount = batchSize;
 
-    // Create Load More button
     const btn = document.createElement('button');
     btn.className = 'load-more-btn';
     btn.textContent = 'Load More';
@@ -249,11 +119,11 @@ function initLoadMore(containerSel, itemSel, batchSize) {
         let shown = 0;
 
         items.forEach(item => {
-            // Skip items hidden by filter (they have 'hidden' class from filter logic)
             if (item.classList.contains('filter-hidden')) {
                 item.style.display = 'none';
                 return;
             }
+
             shown++;
             if (shown <= visibleCount) {
                 item.style.display = '';
@@ -262,8 +132,7 @@ function initLoadMore(containerSel, itemSel, batchSize) {
             }
         });
 
-        // Show/hide button
-        btn.style.display = (shown > visibleCount) ? '' : 'none';
+        btn.style.display = shown > visibleCount ? '' : 'none';
     }
 
     btn.addEventListener('click', function () {
@@ -271,21 +140,19 @@ function initLoadMore(containerSel, itemSel, batchSize) {
         applyLoadMore();
     });
 
-    // Listen for filter changes (dispatched by filter logic)
     document.addEventListener('loadmore-reset', function () {
         visibleCount = batchSize;
         applyLoadMore();
     });
 
-    // Initial apply
     applyLoadMore();
 }
 
-// Auto-init on DOMContentLoaded for pages that have a [data-loadmore] container
+// Auto-init on pages that have a [data-loadmore] container
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('[data-loadmore]').forEach(function (container) {
-        var batchSize = parseInt(container.dataset.loadmore, 10) || 12;
-        var itemSel = container.dataset.loadmoreItem || ':scope > *';
+        const batchSize = parseInt(container.dataset.loadmore, 10) || 12;
+        const itemSel = container.dataset.loadmoreItem || ':scope > *';
         initLoadMore('#' + container.id, itemSel, batchSize);
     });
 });
