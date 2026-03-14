@@ -180,6 +180,13 @@ section {
     overflow: hidden;
 }
 
+/* Anchor-based service cards */
+a.service-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Override width for grid layout if needed, but usually grid handles it */
 .services-grid .service-card {
     width: auto;
