@@ -158,6 +158,32 @@
 
   <!-- Blog Posts -->
   <url>
+    <loc>https://sharmaflorist.com/blog/wedding-car-decoration-ghaziabad-noida.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-27</lastmod>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/blog/images/shaadi-car-phool-sajawat-design.jpeg</image:loc>
+      <image:title>Shaadi Car Phool Sajawat Design Ghaziabad Noida</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/blog/images/ghaziabad-raj-nagar-shaadi-car-phool-sajawat.jpeg</image:loc>
+      <image:title>Raj Nagar Ghaziabad Wedding Car Flower Decoration</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/blog/images/shaadi-car-phool-sajawat-saste-mein-location-per.jpeg</image:loc>
+      <image:title>Location Wedding Car Decoration Service in Ghaziabad and Noida</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/blog/images/shaadi-car-phool-sajawat-saste-s-design.jpeg</image:loc>
+      <image:title>Budget Friendly Wedding Car Decoration Design</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/blog/images/gaur-city-shaadi-car-phool-sajawat-sasti-service.jpeg</image:loc>
+      <image:title>Fresh Flower Wedding Car Decoration Near Noida Extension</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://sharmaflorist.com/blog/greater-noida-flower-show-2026-date.html</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
