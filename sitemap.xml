@@ -381,6 +381,12 @@
 
   <!-- Blog Posts -->
   <url>
+    <loc>https://sharmaflorist.com/blog/grah-pravesh-mandir-flower-decoration-wave-city-ghaziabad.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-08-10</lastmod>
+  </url>
+  <url>
     <loc>https://sharmaflorist.com/blog/wedding-car-decoration-ghaziabad-noida.html</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>

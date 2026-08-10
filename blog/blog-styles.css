@@ -292,6 +292,17 @@ section {
     margin: 1.5rem 0;
 }
 
+.post-content video {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    max-height: 80vh;
+    height: auto;
+    margin: 1.5rem auto;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
 .post-date {
     font-size: 0.9rem;
     color: #888;
