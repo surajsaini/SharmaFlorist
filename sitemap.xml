@@ -2,6 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
+  <!-- Individual Bouquet Pages -->
+  <url>
+    <loc>https://sharmaflorist.com/ghaziabad/bouquets/pink-rose-bouquet.html</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2026-09-05</lastmod>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-bouquet/50-pink-rose-love-bouquet.jpeg</image:loc>
+      <image:title>50 Pink Rose Grand Bouquet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-bouquet/50rose-bouquet.jpeg</image:loc>
+      <image:title>Close-up of 50 Pink Rose Grand Bouquet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-bouquet/pink-rose-big-guldasta.jpeg</image:loc>
+      <image:title>Large Pink Rose Guldasta</image:title>
+    </image:image>
+  </url>
+
   <!-- Main Pages -->
   <url>
     <loc>https://sharmaflorist.com/</loc>
@@ -380,6 +400,36 @@
   </url>
 
   <!-- Blog Posts -->
+  <url>
+    <loc>https://sharmaflorist.com/blog/janmashtami-jhula-flower-decoration-small-home-temple.html</loc>
+    <priority>0.8</priority>
+    <changefreq>yearly</changefreq>
+    <lastmod>2026-09-05</lastmod>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-decoration/janmashtami-jhula-flower-decoration-nehru-nagar.jpeg</image:loc>
+      <image:title>Small Janmashtami Krishna Jhula Flower Decoration in Nehru Nagar</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-decoration/janmashtami-jhula-flower-decoration-raj-nagar-extension.jpeg</image:loc>
+      <image:title>Yellow and White Laddu Gopal Jhula Decoration in Raj Nagar Extension</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-decoration/janmashtami-jhula-flower-decoration-ghaziabad.jpeg</image:loc>
+      <image:title>Sunflower Krishna Janmashtami Jhula Decoration in Ghaziabad</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-decoration/janmashtami-jhula-flower-decoration-indrapuram.jpeg</image:loc>
+      <image:title>Colourful Krishna Jhula Flower Decoration in Indirapuram</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-decoration/janmashtami-jhula-flower-decoration-crossing-republik.jpeg</image:loc>
+      <image:title>Pink Lily Laddu Gopal Jhula Flower Decoration</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-decoration/janmashtami-jhula-flower-decoration-wave-city.jpeg</image:loc>
+      <image:title>Premium Mixed Flower Janmashtami Jhula Decoration in Wave City</image:title>
+    </image:image>
+  </url>
   <url>
     <loc>https://sharmaflorist.com/blog/grah-pravesh-mandir-flower-decoration-wave-city-ghaziabad.html</loc>
     <priority>0.8</priority>
