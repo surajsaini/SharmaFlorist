@@ -64,13 +64,17 @@
             }
         });
 
-        previousButton.addEventListener('click', function () {
-            showSlide(activeIndex - 1);
-        });
+        if (previousButton) {
+            previousButton.addEventListener('click', function () {
+                showSlide(activeIndex - 1);
+            });
+        }
 
-        nextButton.addEventListener('click', function () {
-            showSlide(activeIndex + 1);
-        });
+        if (nextButton) {
+            nextButton.addEventListener('click', function () {
+                showSlide(activeIndex + 1);
+            });
+        }
 
         thumbnails.forEach(function (thumbnail) {
             thumbnail.addEventListener('click', function () {
@@ -81,8 +85,10 @@
 
     const canonicalLink = document.querySelector('link[rel="canonical"]');
     const shareUrl = canonicalLink ? canonicalLink.href : window.location.href;
-    const shareTitle = '50 Pink Rose Grand Bouquet – ₹1,500';
-    const shareText = 'See this 50 Pink Rose Grand Bouquet from Rose N Petals.';
+    const openGraphTitle = document.querySelector('meta[property="og:title"]');
+    const openGraphDescription = document.querySelector('meta[property="og:description"]');
+    const shareTitle = openGraphTitle ? openGraphTitle.content : document.title;
+    const shareText = openGraphDescription ? openGraphDescription.content : 'See this bouquet from Rose N Petals.';
     const nativeShareButton = document.getElementById('native-share');
     const copyLinkButton = document.getElementById('copy-link');
     const shareStatus = document.getElementById('share-status');

@@ -721,6 +721,15 @@ footer {
     margin-bottom: 1.5rem;
 }
 
+.product-detail-link {
+    display: inline-block;
+    margin: -0.35rem 0 1rem;
+    color: #8f3f68;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-underline-offset: 0.2rem;
+}
+
 .buy-btn {
     background: #25d366;
     color: white;
