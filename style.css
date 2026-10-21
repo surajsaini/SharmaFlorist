@@ -1242,3 +1242,350 @@ nav ul li a {
     background-color: #7b3060;
     color: #fff;
 }
+
+/* Karwa Chauth: local occasion page, using the shared site palette. */
+body.karwa-chauth-page main {
+    min-width: 0;
+}
+
+body.karwa-chauth-page nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+body.karwa-chauth-page nav ul li a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+}
+
+body.karwa-chauth-page main a {
+    color: #7b3060;
+    text-underline-offset: 0.2em;
+    overflow-wrap: anywhere;
+}
+
+body.karwa-chauth-page a:focus-visible,
+body.karwa-chauth-page summary:focus-visible {
+    outline: 3px solid #355b3a;
+    outline-offset: 4px;
+}
+
+body.karwa-chauth-page .occasion-skip-link {
+    position: absolute;
+    left: 1rem;
+    top: 0.5rem;
+    z-index: 1001;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    background: #fff;
+    color: #7b3060;
+    transform: translateY(-160%);
+}
+
+body.karwa-chauth-page .occasion-skip-link:focus {
+    transform: translateY(0);
+}
+
+body.karwa-chauth-page .occasion-breadcrumb {
+    width: calc(100% - 2rem);
+    max-width: 1100px;
+    margin: 1.25rem auto;
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+body.karwa-chauth-page .occasion-breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.65rem;
+    list-style: none;
+}
+
+body.karwa-chauth-page .occasion-breadcrumb li + li::before {
+    content: "/";
+    margin-right: 0.65rem;
+    color: #666;
+}
+
+body.karwa-chauth-page .occasion-hero,
+body.karwa-chauth-page .occasion-section {
+    width: calc(100% - 2rem);
+    margin: 0 auto 1.5rem;
+    padding: clamp(1.5rem, 4vw, 3rem);
+    scroll-margin-top: 7rem;
+    border-radius: 18px;
+}
+
+body.karwa-chauth-page .occasion-hero {
+    background: linear-gradient(135deg, var(--pink), var(--soft-green));
+    border: 1px solid #eddae1;
+}
+
+body.karwa-chauth-page .occasion-hero .occasion-kicker {
+    margin-bottom: 0.9rem;
+    color: #355b3a;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+body.karwa-chauth-page h1,
+body.karwa-chauth-page h2,
+body.karwa-chauth-page h3 {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    overflow-wrap: break-word;
+    line-height: 1.25;
+}
+
+body.karwa-chauth-page .occasion-hero h1 {
+    max-width: 900px;
+    margin: 0 auto 1rem;
+    color: #7b3060;
+    font-size: clamp(1.85rem, 4.6vw, 3.1rem);
+}
+
+body.karwa-chauth-page .occasion-hero .occasion-intro {
+    max-width: 760px;
+    margin: 0 auto 1.5rem;
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    line-height: 1.8;
+    color: #414141;
+}
+
+body.karwa-chauth-page .occasion-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem 1rem;
+    margin-bottom: 1.75rem;
+}
+
+body.karwa-chauth-page .page-cta-link,
+body.karwa-chauth-page .occasion-secondary-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 48px;
+    max-width: 100%;
+    margin-top: 0;
+    padding: 0.8rem 1.4rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    white-space: normal;
+}
+
+body.karwa-chauth-page .page-cta-link {
+    background: #7b3060;
+    color: #fff;
+    text-decoration: none;
+}
+
+body.karwa-chauth-page .page-cta-link:hover {
+    background: #5d2348;
+    color: #fff;
+}
+
+body.karwa-chauth-page .occasion-secondary-link {
+    border: 1px solid #7b3060;
+    background: #fff;
+}
+
+body.karwa-chauth-page .occasion-facts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+    max-width: 900px;
+    gap: 1rem;
+    text-align: left;
+}
+
+body.karwa-chauth-page .occasion-facts > div {
+    min-width: 0;
+    padding: 1.1rem;
+    border: 1px solid #e4d6dc;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+body.karwa-chauth-page .occasion-facts dt {
+    margin-bottom: 0.35rem;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+body.karwa-chauth-page .occasion-facts dd {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #7b3060;
+}
+
+body.karwa-chauth-page .occasion-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.8;
+}
+
+body.karwa-chauth-page .occasion-section h2 {
+    margin-bottom: 1.25rem;
+    color: #7b3060;
+    font-size: clamp(1.45rem, 3vw, 2rem);
+}
+
+body.karwa-chauth-page .occasion-section h3 {
+    margin: 1.5rem 0 0.65rem;
+    color: #355b3a;
+    font-size: 1.2rem;
+}
+
+body.karwa-chauth-page .occasion-content p {
+    margin-bottom: 1rem;
+}
+
+body.karwa-chauth-page .occasion-photo {
+    width: 100%;
+    max-width: 620px;
+    margin: 2rem auto;
+}
+
+body.karwa-chauth-page .occasion-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    background: var(--soft-pink);
+}
+
+body.karwa-chauth-page .occasion-photo figcaption {
+    padding: 0.75rem 0.25rem 0;
+    color: #555;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+body.karwa-chauth-page .occasion-note {
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    border-left: 4px solid #63885e;
+    border-radius: 0 10px 10px 0;
+    background: var(--soft-green);
+}
+
+body.karwa-chauth-page .occasion-hero .occasion-source,
+body.karwa-chauth-page .occasion-content .occasion-source {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: #555;
+    overflow-wrap: anywhere;
+}
+
+body.karwa-chauth-page .area-cards {
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+body.karwa-chauth-page .area-card {
+    min-width: 0;
+    flex: 1 1 235px;
+    padding: 1.25rem;
+    background: var(--soft-pink);
+}
+
+body.karwa-chauth-page .area-card h3 {
+    margin-top: 0;
+    color: #7b3060;
+}
+
+body.karwa-chauth-page .area-card p {
+    margin-bottom: 0;
+}
+
+body.karwa-chauth-page .occasion-steps {
+    padding-left: 1.5rem;
+    margin: 1rem 0 1.5rem;
+}
+
+body.karwa-chauth-page .occasion-steps li {
+    margin: 0.8rem 0;
+    padding-left: 0.3rem;
+}
+
+body.karwa-chauth-page .faq-item {
+    padding: 1.1rem 1.25rem;
+    border-color: #e6dce1;
+}
+
+body.karwa-chauth-page .faq-item summary {
+    line-height: 1.6;
+    padding: 0.2rem 0;
+}
+
+body.karwa-chauth-page .faq-item p {
+    margin: 0.8rem 0 0;
+    font-size: 1rem;
+}
+
+body.karwa-chauth-page .page-cta-box {
+    padding: clamp(1.25rem, 3vw, 2rem);
+    background: var(--soft-green);
+    border-color: #cee3d0;
+}
+
+body.karwa-chauth-page .page-cta-box h3 {
+    margin-top: 0;
+    color: #7b3060;
+}
+
+body.karwa-chauth-page .contact-info {
+    margin-top: 1.25rem;
+    overflow-wrap: anywhere;
+}
+
+body.karwa-chauth-page .contact-info h3 {
+    color: #355b3a;
+}
+
+body.karwa-chauth-page .contact-info strong {
+    color: #7b3060;
+}
+
+@media (max-width: 700px) {
+    body.karwa-chauth-page .occasion-facts {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    body.karwa-chauth-page .occasion-facts > div {
+        padding: 0.9rem 1rem;
+    }
+}
+
+@media (max-width: 420px) {
+    body.karwa-chauth-page .occasion-hero,
+    body.karwa-chauth-page .occasion-section {
+        width: calc(100% - 1rem);
+        padding: 1.35rem 1rem;
+    }
+
+    body.karwa-chauth-page .occasion-actions {
+        width: 100%;
+    }
+
+    body.karwa-chauth-page .occasion-actions a {
+        width: 100%;
+    }
+
+    body.karwa-chauth-page .faq-item {
+        padding: 1rem;
+    }
+}
