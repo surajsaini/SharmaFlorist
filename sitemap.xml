@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   
   <!-- Individual Bouquet Pages -->
   <url>
@@ -31,14 +32,34 @@
       <image:title>50 White Roses Big Bouquet Delivery in Ghaziabad</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://sharmaflorist.com/ghaziabad/bouquets/karwa-chauth-rose-lily-bouquet.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2026-10-23</lastmod>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-bouquet/karwa-chauth-bouquet-delivery.jpeg</image:loc>
+      <image:title>Karwa Chauth Rose and Lily Bouquet Delivery in Ghaziabad</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://sharmaflorist.com/flower-bouquet/karwa-chauth-bouquet-delivery.jpeg</video:thumbnail_loc>
+      <video:title>Karwa Chauth Rose and Lily Bouquet Video</video:title>
+      <video:description>Fresh rose and pink lily Karwa Chauth bouquet prepared by Rose N Petals for delivery in Ghaziabad.</video:description>
+      <video:content_loc>https://sharmaflorist.com/flower-bouquet/rose-lily-flower-bouquet-ghaziabad.mp4</video:content_loc>
+    </video:video>
+  </url>
 
   <!-- Karwa Chauth flower delivery in Ghaziabad -->
   <url>
     <loc>https://sharmaflorist.com/ghaziabad/karwa-chauth-flower-delivery.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <image:image>
       <image:loc>https://sharmaflorist.com/flower-bouquet/Karwa-Chauth-gift-flower-bouquet-delivery-ghaziabad.jpg</image:loc>
       <image:title>Karwa Chauth flower bouquet delivery in Ghaziabad</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-bouquet/karwa-chauth-bouquet-delivery.jpeg</image:loc>
+      <image:title>Karwa Chauth Rose and Lily Bouquet in Ghaziabad</image:title>
     </image:image>
   </url>
 
@@ -154,7 +175,7 @@
     <loc>https://sharmaflorist.com/ghaziabad/order-flower-bouquet-online.html</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <image:image>
       <image:loc>https://sharmaflorist.com/flower-bouquet/Karwa-Chauth-gift-flower-bouquet-delivery-ghaziabad.jpg</image:loc>
       <image:title>Karwa Chauth Special Flower Bouquet</image:title>
@@ -166,6 +187,10 @@
     <image:image>
       <image:loc>https://sharmaflorist.com/flower-bouquet/heart-shape-flower-bouquet-same-day-delivery-ghaziabad-greater-noida-west.jpg</image:loc>
       <image:title>Heart Shape Flower Bouquet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sharmaflorist.com/flower-bouquet/karwa-chauth-bouquet-delivery.jpeg</image:loc>
+      <image:title>Karwa Chauth Rose and Lily Bouquet</image:title>
     </image:image>
   </url>
   <url>

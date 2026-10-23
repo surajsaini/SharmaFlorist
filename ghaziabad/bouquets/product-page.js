@@ -25,6 +25,13 @@
                 thumbnail.removeAttribute('aria-current');
             }
         });
+
+        slides.forEach(function (slide, slideIndex) {
+            const video = slide.querySelector('video');
+            if (video && slideIndex !== activeIndex) {
+                video.pause();
+            }
+        });
     }
 
     function showSlide(index) {
