@@ -66,17 +66,19 @@
     const dialog = document.createElement('dialog');
     if (typeof dialog.showModal !== 'function') return;
     dialog.className = 'catalog-lightbox';
-    dialog.setAttribute('aria-labelledby', 'photo-preview-title');
+    dialog.setAttribute('aria-label', 'Product photo');
 
-    const title = document.createElement('h2');
-    title.id = 'photo-preview-title';
-    title.textContent = 'Bouquet photo';
+    const container = document.createElement('div');
+    container.className = 'lightbox-container';
+    const image = document.createElement('img');
+    image.className = 'lightbox-image';
     const close = document.createElement('button');
     close.type = 'button';
-    close.className = 'catalog-lightbox-close';
-    close.textContent = 'Close photo';
-    const image = document.createElement('img');
-    dialog.append(title, close, image);
+    close.className = 'lightbox-close';
+    close.setAttribute('aria-label', 'Close photo');
+    close.innerHTML = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>';
+    container.append(image, close);
+    dialog.appendChild(container);
     document.body.appendChild(dialog);
 
     let opener;
@@ -97,9 +99,7 @@
 
     close.addEventListener('click', function () { dialog.close(); });
     dialog.addEventListener('click', function (event) {
-        const bounds = dialog.getBoundingClientRect();
-        if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right ||
-            event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
+        if (event.target === dialog) dialog.close();
     });
     dialog.addEventListener('close', function () {
         document.body.style.overflow = previousOverflow;
